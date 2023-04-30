@@ -31,7 +31,7 @@ export const navigations = [
     },
     {
         nav: 'О клинике',
-        href: '/О клинике',
+        href: '/О_клинике',
         key: 6,
     },
     {

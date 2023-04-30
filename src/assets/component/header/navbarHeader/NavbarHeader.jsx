@@ -1,6 +1,7 @@
 import {navigations} from "./navbarHeader.js";
 import {Container, Row} from "react-bootstrap";
 import './navbarHeader.scss'
+import {NavLink} from "react-router-dom";
 
 
 const NavbarHeader = () => {
@@ -11,9 +12,9 @@ const NavbarHeader = () => {
                     <ul className='navbar__header__list'>
                         {navigations.map((navigation) =>
                             <li key={navigation.key}>
-
-                                {navigation.nav}
-
+                                <NavLink className='navbar__header__list' to={navigation.href}>
+                                    {navigation.nav}
+                                </NavLink>
                             </li>
                         )}
                     </ul>

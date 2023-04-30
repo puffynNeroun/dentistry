@@ -254,3 +254,26 @@
     padding: 20px 0 15px 0;
   }
 }
+
+@media (max-width: 440px) {
+  .headerLogo {
+    gap: 50px;
+  }
+
+  .header__logo {
+    display: flex;
+    align-items: center;
+
+    &__img {
+      width: 63px;
+    }
+
+
+    &__text {
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 120%;
+      color: #099DBA;
+    }
+  }
+}

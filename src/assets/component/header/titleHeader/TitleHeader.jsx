@@ -5,6 +5,7 @@ import {addressTimes} from "./titleHeader.js";
 import {socialMedias} from "./titleHeader.js";
 import {numbers} from "./titleHeader.js";
 import Burger from "./Burger.jsx";
+import {NavLink} from "react-router-dom";
 
 const TitleHeader = () => {
     return (
@@ -12,14 +13,16 @@ const TitleHeader = () => {
             <Container>
                 <Row className='title__header__container'>
                     <Col xs={3} className='headerLogo'>
-                        <Col xs={1}>
-                            <div className='header__logo'>
-                                <img className='header__logo__img' src={logo} alt=""/>
-                            </div>
-                        </Col>
-                        <Col xs={2} className='header__logo__content'>
-                            <span className='header__logo__text'>Стоматологическая <br/> клиника </span>
-                        </Col>
+                        <NavLink className='headerLogo' to={'/'}>
+                            <Col xs={1}>
+                                <div className='header__logo'>
+                                    <img className='header__logo__img' src={logo} alt=""/>
+                                </div>
+                            </Col>
+                            <Col xs={2} className='header__logo__content'>
+                                <span className='header__logo__text'>Стоматологическая <br/> клиника </span>
+                            </Col>
+                        </NavLink>
                     </Col>
                     {addressTimes.map((addressTime) =>
                         <Col className='header-info' key={addressTime.key} xs={2}>
