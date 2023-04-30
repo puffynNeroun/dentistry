@@ -2,17 +2,22 @@ import {Col} from "react-bootstrap";
 import './burger.scss'
 import {navigations} from "../navbarHeader/navbarHeader.js";
 import {addressTimes, numbers, socialMedias} from "./titleHeader.js";
+import {useState} from "react";
 
 const Burger = () => {
+    const [isOpen, setIsOpen] = useState(false);
     return (
         <Col xs={7} className='burger'>
-            <button className='burger__button'>
-                <span className='burger__button__style'></span>
-                <span className='burger__button__style'></span>
-                <span className='burger__button__style'></span>
+            <button
+                className={`burger__button ${isOpen ? 'open' : ''}`}
+                onClick={() => setIsOpen(!isOpen)}
+            >
+                <span className={`burger__button__style cross1 ${isOpen ? 'open' : ''}`}></span>
+                <span className={`burger__button__style ${isOpen ? 'open' : ''}`}></span>
+                <span className={`burger__button__style cross2 ${isOpen ? 'open' : ''}`}></span>
             </button>
 
-            <ul className='burger__menu'>
+            <ul className={`burger__menu ${isOpen ? 'open' : ''}`}>
                 {navigations.map((navigation) =>
                     <li key={navigation.key}>
 
