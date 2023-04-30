@@ -3,6 +3,7 @@ import './burger.scss'
 import {navigations} from "../navbarHeader/navbarHeader.js";
 import {addressTimes, numbers, socialMedias} from "./titleHeader.js";
 import {useState} from "react";
+import {NavLink} from "react-router-dom";
 
 const Burger = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -20,9 +21,9 @@ const Burger = () => {
             <ul className={`burger__menu ${isOpen ? 'open' : ''}`}>
                 {navigations.map((navigation) =>
                     <li key={navigation.key}>
-
-                        {navigation.nav}
-
+                        <NavLink className='burger__menu__list' to={navigation.href}>
+                            {navigation.nav}
+                        </NavLink>
                     </li>
                 )}
                 <div className='burger__menu__icon'>
