@@ -1,0 +1,39 @@
+.footer {
+  background: #F3FEFE;
+
+
+  &__container {
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+
+
+    &__text {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 120%;
+      color: #099DBA;
+    }
+  }
+  &__navbar__list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    padding-top: 9px;
+    padding-bottom: 9px ;
+    color: #099DBA;
+    font-weight: 500;
+    font-size: 18px;
+  }
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
